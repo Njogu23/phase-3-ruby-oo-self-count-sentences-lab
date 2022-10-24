@@ -27,4 +27,3 @@ class String
   end
 end
 
-print "My, name is?"
