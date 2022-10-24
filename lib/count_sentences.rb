@@ -18,10 +18,13 @@ class String
   end
 
   def count_sentences
-      if self.scan(/\W/).grep(/\S/).count == 0
+      if self.scan(/\W/).count == 0
         self.split(/\W/).count
       else
     self.scan(/\W/).grep(/\S/).concat(self.split.grep(/\w/)).count
+    #self.scan(/[\w'-]+|[[:punct:]]/) also works
       end
   end
 end
+
+print "My, name is?"
